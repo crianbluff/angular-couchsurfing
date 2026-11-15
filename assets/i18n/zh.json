@@ -1,4 +1,10 @@
 {
+  "GENERAL": {
+    "LOADING": "加载中",
+    "BACK": "返回",
+    "ERROR": "错误",
+    "CLOSE": "关闭"
+  },
   "MENU": {
     "HOME": "首页",
     "GUESTS": "客人",
@@ -59,7 +65,8 @@
     "YES": "是",
     "NO": "否",
     "CLEAR": "清除",
-    "SEARCH": "搜索"
+    "SEARCH": "搜索",
+    "SEARCHING": "正在搜索"
   },
   "GUESTS_ACTIONS": {
     "SEE_STATS": "查看统计数据",
@@ -74,7 +81,14 @@
     "CHANGE_SEARCH": "尝试更改搜索条件。",
     "CHANGE_TO_CARDS": "切换到卡片视图",
     "CHANGE_TO_MAP": "切换到地图视图",
-    "CHANGE_TO_TABLE": "切换到表格视图"
+    "CHANGE_TO_TABLE": "切换到表格视图",
+    "RETRY": "重试",
+    "LOAD_ERROR": "无法加载更多客人。",
+    "CARDS_END": "已到达客人列表的末尾。",
+    "CARDS_END_COUNTRY": "已到达来自{{country}}的客人列表末尾。",
+    "CARDS_END_REGION": "已到达来自{{region}}的客人列表末尾。",
+    "CARDS_END_CONTINENT": "已到达来自{{continent}}的客人列表末尾。",
+    "CARDS_END_FILTERS": "已到达所选筛选条件的结果末尾。"
   },
   "GUESTS_LOADING": {
     "CARDS_1": "正在加载您的客人",
@@ -134,26 +148,20 @@
     "DID_THEY_REQUEST": "他们是否请求留宿？",
     "I_SENT_THE_REQUEST": "我提出了请求",
     "LOCATION": "地点",
-    "CONTINENT": "洲",
-    "REGION": "地区",
     "HOMETOWN": "家乡",
     "LIVING_IN": "居住地",
     "WE_MET": "相识地点",
-    "OCCUPATION": "职业",
-    "GIFT": "礼物",
-    "COMMENTS": "评论",
-    "REFERENCES": "评价",
-    "THEIR_REFERENCE": "他们的评价",
-    "MY_REFERENCE": "我的评价",
+    "BACK_TO_TOP": "返回顶部",
     "GROUP_TYPES": {
       "solo": "独自旅行",
       "couple": "情侣",
       "friends": "朋友",
       "family": "家庭"
     },
-    "LOADING_1": "正在加载详细信息",
-    "LOADING_2": "正在获取更多信息",
-    "LOADING_3": "即将完成"
+    "DELETE_GUEST": "删除客人",
+    "DELETE_GUESTS": "删除客人",
+    "VIEW_GROUP": "查看群组",
+    "LOAD_MORE_ERROR": "无法加载更多客人，请稍后重试。"
   },
   "GUEST_DETAIL": {
     "TITLE": "客人详情",
@@ -179,7 +187,8 @@
     "SOCIAL": {
       "COUCHSURFING": "查看 Couchsurfing 个人资料",
       "INSTAGRAM": "查看 Instagram 个人资料",
-      "WHATSAPP": "查看 WhatsApp 个人资料"
+      "WHATSAPP": "查看 WhatsApp 个人资料",
+      "PHONE": "拨打电话"
     },
     "DIVIDER": {
       "IDENTITY": "身份"
@@ -189,7 +198,6 @@
       "TITLE": "个人信息",
       "FULL_NAME": "全名",
       "BIRTH_DATE": "出生日期",
-      "PHONE_NUMBER": "电话号码",
       "GAY": "同性恋",
       "STAY_REQUEST": "留宿请求",
       "REQUESTED_STAY": "他们请求了留宿",
@@ -221,6 +229,7 @@
         "FAMILY": "家庭"
       },
       "STAYED": "是否留宿？",
+      "STAYED_GROUP": "他们住过吗？",
       "HUNG_OUT": "一起活动",
       "FIRST_VISIT": "首次访问"
     },
@@ -262,7 +271,6 @@
         "SUBTITLE": "旅行同伴",
         "TITLE": "群组成员",
         "GUEST_FALLBACK": "客人",
-        "WHATSAPP": "WhatsApp",
         "LIVING_IN": "居住地"
       }
     }
@@ -276,10 +284,48 @@
       "FRIENDS": "朋友",
       "FAMILY": "家庭"
     },
-    "ADD_GUEST": "添加另一位客人",
+    "CHANGE_TYPE": {
+      "SELECT_TITLE": "选择客人",
+      "SELECT_DESCRIPTION": "请选择恰好{{count}}位要保留的客人。",
+      "APPLY": "应用选择",
+      "CANCEL": "取消",
+      "CONFIRM_TITLE": "确认更改群组？",
+      "CONFIRM_DESCRIPTION": "保存更改时，未选中的客人将被删除。此操作无法撤销。",
+      "CONFIRM": "是，确认更改"
+    },
+    "ADD_GUEST": {
+      "ADD_ANOTHER_GUEST": "添加另一位客人",
+      "SUCCESS": "已添加另一份客人表单"
+    },
     "CREATE": "创建",
+    "CREATING": "正在创建",
     "UPDATE": "更新",
-    "MAX_MEMBERS": "最多可以添加 5 位成员"
+    "UPDATING": "正在更新",
+    "MAX_MEMBERS": "最多可添加 5 位成员",
+    "REMOVE_GUEST": {
+      "TITLE": "移除客人",
+      "DESCRIPTION": "确定要从表单中移除此客人吗？",
+      "CONFIRM": "是，移除"
+    },
+    "GUEST_NUMBER": "客人 #{{number}}",
+    "FORM_COUNT_SINGULAR": "1份客人表单",
+    "FORM_COUNT": "{{count}}份客人表单",
+    "NO_CHANGES": {
+      "TITLE": "未进行任何更改",
+      "DESCRIPTION": "你尚未修改此表单中的任何信息。确定要不保存就离开吗？",
+      "EXIT": "不保存并离开",
+      "CONTINUE": "继续编辑"
+    },
+    "UPDATE": "更新",
+    "MAX_MEMBERS": "最多可添加 5 位成员",
+    "REMOVE_GUEST": {
+      "TITLE": "移除客人",
+      "DESCRIPTION": "确定要从表单中移除此客人吗？",
+      "CONFIRM": "是，移除"
+    },
+    "GUEST_NUMBER": "客人 #{{number}}",
+    "FORM_COUNT_SINGULAR": "1份客人表单",
+    "FORM_COUNT": "{{count}}份客人表单"
   },
   "TRIP_FORM": {
     "TITLE": "行程信息",
@@ -369,7 +415,8 @@
       "DUPLICATE_GIFT": "这件礼物已添加",
       "GIFT_EXISTS": "这件礼物已存在",
       "NO_GIFTS": "没有可清除的礼物",
-      "GIFTS_CLEARED": "礼物列表已清空"
+      "GIFTS_CLEARED": "礼物列表已清空",
+      "LOCATION_API_LIMIT": "目前无法自动加载州和城市。您可以在相应的字段中手动输入，或稍后再试！"
     },
     "ANNOUNCEMENTS": {
       "GIFT_REMOVED": "礼物已移除"
@@ -749,8 +796,16 @@
         "CONFIRM_BUTTON": "删除客人"
       },
       "SUCCESS": {
-        "MESSAGE": "客人 <strong class=\"danger\">{{name}}</strong> 已成功删除"
+        "GUEST_MESSAGE": "已成功删除<strong class=\"danger\">{{name}}</strong>",
+        "GROUP_MESSAGE": "已成功删除<strong class=\"danger\">{{names}}</strong>"
       }
+    },
+    "DRAFT_EXIT": {
+      "TITLE": "您想如何处理所做的更改？",
+      "DESCRIPTION": "您已在此表单中输入信息。您可以保存草稿以便稍后继续，也可以直接离开而不保留所做的更改。",
+      "SAVE_AND_EXIT": "退出并保存更改",
+      "DISCARD_AND_EXIT": "不保存直接退出",
+      "STAY": "留在此页面"
     },
     "CREATE": {
       "GUEST_SUCCESS": "客人创建成功",
@@ -763,6 +818,33 @@
       "GUEST_ERROR": "更新客人时出错",
       "GROUP_SUCCESS": "团体更新成功",
       "GROUP_ERROR": "更新团体时出错"
+    },
+    "BUTTONS": {
+      "SAVE": "Сохранить",
+      "CLOSE": "Закрыть",
+      "DELETE": "Удалить",
+      "COPY": "Копировать",
+      "COPIED": "Скопировано!"
+    },
+    "DELETE_GUEST": {
+      "CONFIRMATION": {
+        "MESSAGE": "Вы уверены, что хотите удалить?",
+        "CONFIRM_BUTTON": "Я хочу удалить этого гостя",
+        "GROUP_CONFIRM_BUTTON": "Я хочу удалить эту группу"
+      },
+      "WARNING": {
+        "TITLE": "Внимательно прочитайте перед продолжением",
+        "MESSAGE": "Гость <strong class=\"danger\">{{name}}</strong> будет удалён без возможности восстановления.",
+        "GROUP_MESSAGE": "Группа <strong class=\"danger\">{{name}}</strong> будет удалена без возможности восстановления.",
+        "CONFIRM_BUTTON": "Я понимаю последствия"
+      },
+      "TYPE_TO_CONFIRM": {
+        "TITLE": "Для подтверждения введите \"<strong class=\"danger\">{{name}}</strong>\""
+      },
+      "SUCCESS": {
+        "MESSAGE": "<strong class=\"danger\">{{name}}</strong> успешно удалён",
+        "GROUP_MESSAGE": "<strong class=\"danger\">{{names}}</strong> успешно удалены"
+      }
     }
   },
   "ERRORS": {

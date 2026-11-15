@@ -1,4 +1,10 @@
 {
+  "GENERAL": {
+    "LOADING": "Загрузка",
+    "BACK": "Назад",
+    "ERROR": "Ошибка",
+    "CLOSE": "Закрыть"
+  },
   "MENU": {
     "HOME": "Главная",
     "GUESTS": "Гости",
@@ -59,7 +65,8 @@
     "YES": "Да",
     "NO": "Нет",
     "CLEAR": "Очистить",
-    "SEARCH": "Поиск"
+    "SEARCH": "Поиск",
+    "SEARCHING": "Идёт поиск"
   },
   "GUESTS_ACTIONS": {
     "SEE_STATS": "Посмотреть статистику",
@@ -74,13 +81,16 @@
     "CHANGE_SEARCH": "Попробуйте изменить критерии поиска.",
     "CHANGE_TO_CARDS": "Переключить на карточки",
     "CHANGE_TO_MAP": "Переключить на карту",
-    "CHANGE_TO_TABLE": "Переключить на таблицу"
+    "CHANGE_TO_TABLE": "Переключить на табличный вид",
+    "RETRY": "Повторить попытку",
+    "LOAD_ERROR": "Не удалось загрузить больше гостей.",
+    "CARDS_END": "Вы достигли конца списка гостей.",
+    "CARDS_END_COUNTRY": "Вы достигли конца списка гостей из страны {{country}}.",
+    "CARDS_END_REGION": "Вы достигли конца списка гостей из региона {{region}}.",
+    "CARDS_END_CONTINENT": "Вы достигли конца списка гостей с континента {{continent}}.",
+    "CARDS_END_FILTERS": "Вы достигли конца результатов по выбранным фильтрам."
   },
   "GUESTS_LOADING": {
-    "CARDS_1": "Загружаем ваших гостей",
-    "CARDS_2": "Подготавливаем список гостей",
-    "CARDS_3": "Почти готово",
-    "CARDS_4": "Карточки скоро появятся",
     "MAP_1": "Загружаем карту",
     "MAP_2": "Ищем ваших гостей",
     "MAP_3": "Подготавливаем карту",
@@ -134,26 +144,20 @@
     "DID_THEY_REQUEST": "Они просили о проживании?",
     "I_SENT_THE_REQUEST": "Я отправил(а) запрос",
     "LOCATION": "МЕСТОПОЛОЖЕНИЕ",
-    "CONTINENT": "Континент",
-    "REGION": "Регион",
     "HOMETOWN": "Родной город",
     "LIVING_IN": "Место жительства",
     "WE_MET": "Мы познакомились",
-    "OCCUPATION": "ПРОФЕССИЯ",
-    "GIFT": "ПОДАРОК",
-    "COMMENTS": "КОММЕНТАРИИ",
-    "REFERENCES": "РЕКОМЕНДАЦИИ",
-    "THEIR_REFERENCE": "Их рекомендация",
-    "MY_REFERENCE": "Моя рекомендация",
+    "BACK_TO_TOP": "Вернуться наверх",
     "GROUP_TYPES": {
       "solo": "Один",
       "couple": "Пара",
       "friends": "Друзья",
       "family": "Семья"
     },
-    "LOADING_1": "Загружаем сведения",
-    "LOADING_2": "Получаем дополнительную информацию",
-    "LOADING_3": "Почти готово"
+    "DELETE_GUEST": "Удалить гостя",
+    "DELETE_GUESTS": "Удалить гостей",
+    "VIEW_GROUP": "Посмотреть группу",
+    "LOAD_MORE_ERROR": "Не удалось загрузить больше гостей. Пожалуйста, попробуйте позже."
   },
   "GUEST_DETAIL": {
     "TITLE": "Информация о госте",
@@ -179,7 +183,8 @@
     "SOCIAL": {
       "COUCHSURFING": "Просмотреть профиль Couchsurfing",
       "INSTAGRAM": "Просмотреть профиль Instagram",
-      "WHATSAPP": "Просмотреть профиль WhatsApp"
+      "WHATSAPP": "Просмотреть профиль WhatsApp",
+      "PHONE": "Позвонить"
     },
     "DIVIDER": {
       "IDENTITY": "ЛИЧНОСТЬ"
@@ -189,7 +194,6 @@
       "TITLE": "Личная информация",
       "FULL_NAME": "Полное имя",
       "BIRTH_DATE": "Дата рождения",
-      "PHONE_NUMBER": "Номер телефона",
       "GAY": "Гей",
       "STAY_REQUEST": "Запрос на проживание",
       "REQUESTED_STAY": "Они попросили о проживании",
@@ -221,6 +225,7 @@
         "FAMILY": "Семья"
       },
       "STAYED": "Останавливался?",
+      "STAYED_GROUP": "Они останавливались?",
       "HUNG_OUT": "Проводили время вместе",
       "FIRST_VISIT": "Первое посещение"
     },
@@ -262,7 +267,6 @@
         "SUBTITLE": "ПОПУТЧИКИ",
         "TITLE": "Участники группы",
         "GUEST_FALLBACK": "Гость",
-        "WHATSAPP": "WhatsApp",
         "LIVING_IN": "Место жительства"
       }
     }
@@ -276,10 +280,48 @@
       "FRIENDS": "Друзья",
       "FAMILY": "Семья"
     },
-    "ADD_GUEST": "Добавить ещё одного гостя",
+    "CHANGE_TYPE": {
+      "SELECT_TITLE": "Выбрать гостей",
+      "SELECT_DESCRIPTION": "Выберите ровно {{count}} гостя/гостей, которых хотите сохранить.",
+      "APPLY": "Применить выбор",
+      "CANCEL": "Отмена",
+      "CONFIRM_TITLE": "Подтвердить изменение группы?",
+      "CONFIRM_DESCRIPTION": "Невыбранные гости будут удалены при сохранении изменений. Это действие нельзя отменить.",
+      "CONFIRM": "Да, подтвердить изменения"
+    },
+    "ADD_GUEST": {
+      "ADD_ANOTHER_GUEST": "Добавить ещё одного гостя",
+      "SUCCESS": "Добавлена ещё одна форма гостя"
+    },
     "CREATE": "Создать",
+    "CREATING": "Создание",
     "UPDATE": "Обновить",
-    "MAX_MEMBERS": "Можно добавить не более 5 участников"
+    "UPDATING": "Обновление",
+    "MAX_MEMBERS": "Можно добавить не более 5 участников",
+    "REMOVE_GUEST": {
+      "TITLE": "Удалить гостя",
+      "DESCRIPTION": "Вы уверены, что хотите удалить этого гостя из формы?",
+      "CONFIRM": "Да, удалить"
+    },
+    "GUEST_NUMBER": "Гость № {{number}}",
+    "FORM_COUNT_SINGULAR": "1 анкета гостя",
+    "FORM_COUNT": "{{count}} анкет гостей",
+    "NO_CHANGES": {
+      "TITLE": "Изменения не внесены",
+      "DESCRIPTION": "Вы не изменили информацию в этой форме. Хотите выйти без сохранения?",
+      "EXIT": "Выйти без сохранения",
+      "CONTINUE": "Продолжить редактирование"
+    },
+    "UPDATE": "Обновить",
+    "MAX_MEMBERS": "Você pode adicionar no máximo 5 membros",
+    "REMOVE_GUEST": {
+      "TITLE": "Remover hóspede",
+      "DESCRIPTION": "Tem certeza de que deseja remover este hóspede do formulário?",
+      "CONFIRM": "Sim, remover"
+    },
+    "GUEST_NUMBER": "Гость № {{number}}",
+    "FORM_COUNT_SINGULAR": "1 анкета гостя",
+    "FORM_COUNT": "{{count}} анкеты гостей"
   },
   "TRIP_FORM": {
     "TITLE": "Информация о поездке",
@@ -369,7 +411,8 @@
       "DUPLICATE_GIFT": "Этот подарок уже добавлен",
       "GIFT_EXISTS": "Такой подарок уже существует",
       "NO_GIFTS": "Нет подарков для удаления",
-      "GIFTS_CLEARED": "Список подарков очищен"
+      "GIFTS_CLEARED": "Список подарков очищен",
+      "LOCATION_API_LIMIT": "В настоящее время не удаётся автоматически загрузить штаты и города. Вы можете ввести их вручную в соответствующие поля или попробовать ещё раз позже!"
     },
     "ANNOUNCEMENTS": {
       "GIFT_REMOVED": "Подарок удалён"
@@ -749,8 +792,16 @@
         "CONFIRM_BUTTON": "Удалить гостя"
       },
       "SUCCESS": {
-        "MESSAGE": "<strong class=\"danger\">{{name}}</strong> успешно удалён"
+        "GUEST_MESSAGE": "<strong class=\"danger\">{{name}}</strong> успешно удалён",
+        "GROUP_MESSAGE": "<strong class=\"danger\">{{names}}</strong> успешно удалены"
       }
+    },
+    "DRAFT_EXIT": {
+      "TITLE": "Что вы хотите сделать с внесёнными изменениями?",
+      "DESCRIPTION": "Вы ввели данные в эту форму. Вы можете сохранить черновик, чтобы продолжить позже, или выйти без сохранения изменений.",
+      "SAVE_AND_EXIT": "Выйти и сохранить изменения",
+      "DISCARD_AND_EXIT": "Выйти без сохранения",
+      "STAY": "Остаться"
     },
     "CREATE": {
       "GUEST_SUCCESS": "Гость успешно создан",
@@ -763,6 +814,33 @@
       "GUEST_ERROR": "Ошибка при обновлении данных гостя",
       "GROUP_SUCCESS": "Данные группы успешно обновлены",
       "GROUP_ERROR": "Ошибка при обновлении данных группы"
+    },
+    "BUTTONS": {
+      "SAVE": "Сохранить",
+      "CLOSE": "Закрыть",
+      "DELETE": "Удалить",
+      "COPY": "Копировать",
+      "COPIED": "Скопировано!"
+    },
+    "DELETE_GUEST": {
+      "CONFIRMATION": {
+        "MESSAGE": "Вы уверены, что хотите удалить?",
+        "CONFIRM_BUTTON": "Я хочу удалить этого гостя",
+        "GROUP_CONFIRM_BUTTON": "Я хочу удалить эту группу"
+      },
+      "WARNING": {
+        "TITLE": "Внимательно прочитайте перед продолжением",
+        "MESSAGE": "Гость <strong class=\"danger\">{{name}}</strong> будет удалён без возможности восстановления.",
+        "GROUP_MESSAGE": "Группа <strong class=\"danger\">{{name}}</strong> будет удалена без возможности восстановления.",
+        "CONFIRM_BUTTON": "Я понимаю последствия"
+      },
+      "TYPE_TO_CONFIRM": {
+        "TITLE": "Для подтверждения введите \"<strong class=\"danger\">{{name}}</strong>\""
+      },
+      "SUCCESS": {
+        "MESSAGE": "<strong class=\"danger\">{{name}}</strong> успешно удалён",
+        "GROUP_MESSAGE": "<strong class=\"danger\">{{names}}</strong> успешно удалены"
+      }
     }
   },
   "ERRORS": {

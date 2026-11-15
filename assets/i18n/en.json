@@ -1,4 +1,10 @@
 {
+  "GENERAL": {
+    "LOADING": "Loading",
+    "BACK": "Back",
+    "ERROR": "Error",
+    "CLOSE": "Close"
+  },
   "MENU": {
     "HOME": "Home",
     "GUESTS": "Guests",
@@ -59,7 +65,8 @@
     "YES": "Yes",
     "NO": "No",
     "CLEAR": "Clear",
-    "SEARCH": "Search"
+    "SEARCH": "Search",
+    "SEARCHING": "Searching..."
   },
   "GUESTS_ACTIONS": {
     "SEE_STATS": "See stats",
@@ -74,13 +81,16 @@
     "CHANGE_SEARCH": "Try changing your search criteria.",
     "CHANGE_TO_CARDS": "Change view to cards",
     "CHANGE_TO_MAP": "Change view to map",
-    "CHANGE_TO_TABLE": "Change view to table"
+    "CHANGE_TO_TABLE": "Change view to table",
+    "RETRY": "Try again",
+    "LOAD_ERROR": "We couldn't load more guests.",
+    "CARDS_END": "You've reached the end of the guest list.",
+    "CARDS_END_COUNTRY": "You've reached the end of the guests from {{country}}.",
+    "CARDS_END_REGION": "You've reached the end of the guests from {{region}}.",
+    "CARDS_END_CONTINENT": "You've reached the end of the guests from {{continent}}.",
+    "CARDS_END_FILTERS": "You've reached the end of the results for your selected filters."
   },
   "GUESTS_LOADING": {
-    "CARDS_1": "Loading your guests",
-    "CARDS_2": "Getting your guests ready",
-    "CARDS_3": "Almost there",
-    "CARDS_4": "Your cards are coming",
     "MAP_1": "Loading the map",
     "MAP_2": "Finding your guests",
     "MAP_3": "Preparing your map",
@@ -134,26 +144,20 @@
     "DID_THEY_REQUEST": "Did they request a stay?",
     "I_SENT_THE_REQUEST": "I sent the request",
     "LOCATION": "LOCATION",
-    "CONTINENT": "Continent",
-    "REGION": "Region",
     "HOMETOWN": "Hometown",
     "LIVING_IN": "Living In",
     "WE_MET": "We Met",
-    "OCCUPATION": "OCCUPATION",
-    "GIFT": "GIFT",
-    "COMMENTS": "COMMENTS",
-    "REFERENCES": "REFERENCES",
-    "THEIR_REFERENCE": "Their Reference",
-    "MY_REFERENCE": "My Reference",
+    "BACK_TO_TOP": "Back to top",
     "GROUP_TYPES": {
       "solo": "Solo",
       "couple": "Couple",
       "friends": "Friends",
       "family": "Family"
     },
-    "LOADING_1": "Loading details",
-    "LOADING_2": "Getting more information",
-    "LOADING_3": "Almost there"
+    "DELETE_GUEST": "Delete guest",
+    "DELETE_GUESTS": "Delete guests",
+    "VIEW_GROUP": "View group",
+    "LOAD_MORE_ERROR": "We couldn't load more guests. Please try again later."
   },
   "GUEST_DETAIL": {
     "TITLE": "Guest Details",
@@ -179,7 +183,8 @@
     "SOCIAL": {
       "COUCHSURFING": "View Couchsurfing profile",
       "INSTAGRAM": "View Instagram profile",
-      "WHATSAPP": "View WhatsApp profile"
+      "WHATSAPP": "View WhatsApp profile",
+      "PHONE": "Make a call"
     },
     "DIVIDER": {
       "IDENTITY": "IDENTITY"
@@ -189,7 +194,6 @@
       "TITLE": "Personal Information",
       "FULL_NAME": "Full Name",
       "BIRTH_DATE": "Birth Date",
-      "PHONE_NUMBER": "Phone Number",
       "GAY": "Gay",
       "STAY_REQUEST": "Stay Request",
       "REQUESTED_STAY": "They requested a stay",
@@ -221,6 +225,7 @@
         "FAMILY": "Family"
       },
       "STAYED": "Stayed?",
+      "STAYED_GROUP": "Stayed?",
       "HUNG_OUT": "Hung Out",
       "FIRST_VISIT": "First Visit"
     },
@@ -262,7 +267,6 @@
         "SUBTITLE": "TRAVEL COMPANIONS",
         "TITLE": "Group Members",
         "GUEST_FALLBACK": "Guest",
-        "WHATSAPP": "WhatsApp",
         "LIVING_IN": "Living In"
       }
     }
@@ -276,10 +280,38 @@
       "FRIENDS": "Friends",
       "FAMILY": "Family"
     },
-    "ADD_GUEST": "Add another guest",
+    "CHANGE_TYPE": {
+      "SELECT_TITLE": "Select guests",
+      "SELECT_DESCRIPTION": "Select exactly {{count}} guest(s) you want to keep.",
+      "APPLY": "Apply selection",
+      "CANCEL": "Cancel",
+      "CONFIRM_TITLE": "Confirm group change?",
+      "CONFIRM_DESCRIPTION": "Unselected guests will be deleted when saving the changes. This action cannot be undone.",
+      "CONFIRM": "Yes, confirm changes"
+    },
+    "ADD_GUEST": {
+      "ADD_ANOTHER_GUEST": "Add another guest",
+      "SUCCESS": "Another guest form has been added"
+    },
     "CREATE": "Create",
+    "CREATING": "Creating...",
     "UPDATE": "Update",
-    "MAX_MEMBERS": "You can add a maximum of 5 members"
+    "UPDATING": "Updating...",
+    "MAX_MEMBERS": "You can add a maximum of 5 members",
+    "REMOVE_GUEST": {
+      "TITLE": "Remove guest",
+      "DESCRIPTION": "Are you sure you want to remove this guest form?",
+      "CONFIRM": "Yes, remove"
+    },
+    "GUEST_NUMBER": "Guest #{{number}}",
+    "FORM_COUNT_SINGULAR": "1 guest form",
+    "FORM_COUNT": "{{count}} guest forms",
+    "NO_CHANGES": {
+      "TITLE": "No changes made",
+      "DESCRIPTION": "You haven't modified any information in this form. Do you want to leave without saving?",
+      "EXIT": "Leave without saving",
+      "CONTINUE": "Continue editing"
+    }
   },
   "TRIP_FORM": {
     "TITLE": "Trip Information",
@@ -369,7 +401,8 @@
       "DUPLICATE_GIFT": "This gift has already been added",
       "GIFT_EXISTS": "This gift already exists",
       "NO_GIFTS": "There are no gifts to clear",
-      "GIFTS_CLEARED": "Gift list cleared"
+      "GIFTS_CLEARED": "Gift list cleared",
+      "LOCATION_API_LIMIT": "We are currently unable to load states and cities automatically. You can enter them manually in the corresponding fields. Or please try again later!"
     },
     "ANNOUNCEMENTS": {
       "GIFT_REMOVED": "Gift removed"
@@ -749,8 +782,16 @@
         "CONFIRM_BUTTON": "Delete guest"
       },
       "SUCCESS": {
-        "MESSAGE": "<strong class=\"danger\">{{name}}</strong> has been deleted successfully"
+        "GUEST_MESSAGE": "<strong class=\"danger\">{{name}}</strong> has been deleted successfully",
+        "GROUP_MESSAGE": "<strong class=\"danger\">{{names}}</strong> have been deleted successfully"
       }
+    },
+    "DRAFT_EXIT": {
+      "TITLE": "What would you like to do with your changes?",
+      "DESCRIPTION": "You have entered information in this form. You can save a draft to continue later or leave without keeping your changes.",
+      "SAVE_AND_EXIT": "Exit and save changes",
+      "DISCARD_AND_EXIT": "Exit without saving",
+      "STAY": "Stay"
     },
     "CREATE": {
       "GUEST_SUCCESS": "Guest created successfully",
@@ -763,6 +804,33 @@
       "GUEST_ERROR": "Error updating guest",
       "GROUP_SUCCESS": "Group updated successfully",
       "GROUP_ERROR": "Error updating group"
+    },
+    "BUTTONS": {
+      "SAVE": "Save",
+      "CLOSE": "Close",
+      "DELETE": "Delete",
+      "COPY": "Copy",
+      "COPIED": "Copied!"
+    },
+    "DELETE_GUEST": {
+      "CONFIRMATION": {
+        "MESSAGE": "Are you sure you want to delete?",
+        "CONFIRM_BUTTON": "I want to delete this guest",
+        "GROUP_CONFIRM_BUTTON": "I want to delete this group"
+      },
+      "WARNING": {
+        "TITLE": "Please read carefully before continuing",
+        "MESSAGE": "This will permanently delete the guest <strong class=\"danger\">{{name}}</strong>.",
+        "GROUP_MESSAGE": "This will permanently delete the group <strong class=\"danger\">{{name}}</strong>.",
+        "CONFIRM_BUTTON": "I understand the consequences"
+      },
+      "TYPE_TO_CONFIRM": {
+        "TITLE": "To confirm, type \"<strong class=\"danger\">{{name}}</strong>\""
+      },
+      "SUCCESS": {
+        "MESSAGE": "<strong class=\"danger\">{{name}}</strong> has been deleted successfully",
+        "GROUP_MESSAGE": "<strong class=\"danger\">{{names}}</strong> have been deleted successfully"
+      }
     }
   },
   "ERRORS": {

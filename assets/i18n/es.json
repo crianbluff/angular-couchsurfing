@@ -1,4 +1,10 @@
 {
+  "GENERAL": {
+    "LOADING": "Cargando",
+    "BACK": "Volver",
+    "ERROR": "Error",
+    "CLOSE": "Cerrar"
+  },
   "MENU": {
     "HOME": "Inicio",
     "GUESTS": "Huéspedes",
@@ -59,7 +65,8 @@
     "YES": "Sí",
     "NO": "No",
     "CLEAR": "Limpiar",
-    "SEARCH": "Buscar"
+    "SEARCH": "Buscar",
+    "SEARCHING": "Buscando"
   },
   "GUESTS_ACTIONS": {
     "SEE_STATS": "Ver estadísticas",
@@ -74,13 +81,16 @@
     "CHANGE_SEARCH": "Intenta cambiar los criterios de búsqueda.",
     "CHANGE_TO_CARDS": "Cambiar a vista de tarjetas",
     "CHANGE_TO_MAP": "Cambiar a vista de mapa",
-    "CHANGE_TO_TABLE": "Cambiar a vista de tabla"
+    "CHANGE_TO_TABLE": "Cambiar a la vista de tabla",
+    "RETRY": "Intentar de nuevo",
+    "LOAD_ERROR": "No se pudieron cargar más huéspedes.",
+    "CARDS_END": "Has llegado al final de la lista de huéspedes.",
+    "CARDS_END_COUNTRY": "Has llegado al final de la lista de huéspedes de {{country}}.",
+    "CARDS_END_REGION": "Has llegado al final de la lista de huéspedes de {{region}}.",
+    "CARDS_END_CONTINENT": "Has llegado al final de la lista de huéspedes de {{continent}}.",
+    "CARDS_END_FILTERS": "Has llegado al final de los resultados para los filtros seleccionados."
   },
   "GUESTS_LOADING": {
-    "CARDS_1": "Cargando tus huéspedes",
-    "CARDS_2": "Preparando tus huéspedes",
-    "CARDS_3": "Ya casi está",
-    "CARDS_4": "Tus tarjetas están en camino",
     "MAP_1": "Cargando el mapa",
     "MAP_2": "Buscando a tus huéspedes",
     "MAP_3": "Preparando tu mapa",
@@ -135,26 +145,20 @@
     "DID_THEY_REQUEST": "¿Solicitó alojamiento?",
     "I_SENT_THE_REQUEST": "Yo envié la solicitud",
     "LOCATION": "UBICACIÓN",
-    "CONTINENT": "Continente",
-    "REGION": "Región",
     "HOMETOWN": "Ciudad de origen",
     "LIVING_IN": "Vive en",
     "WE_MET": "Nos conocimos en",
-    "OCCUPATION": "OCUPACIÓN",
-    "GIFT": "REGALO",
-    "COMMENTS": "COMENTARIOS",
-    "REFERENCES": "REFERENCIAS",
-    "THEIR_REFERENCE": "Su referencia",
-    "MY_REFERENCE": "Mi referencia",
+    "BACK_TO_TOP": "Volver arriba",
     "GROUP_TYPES": {
       "solo": "Solo",
       "couple": "Pareja",
       "friends": "Amigos",
       "family": "Familia"
     },
-    "LOADING_1": "Cargando detalles",
-    "LOADING_2": "Obteniendo más información",
-    "LOADING_3": "Ya casi terminamos"
+    "DELETE_GUEST": "Eliminar invitado",
+    "DELETE_GUESTS": "Eliminar invitados",
+    "VIEW_GROUP": "Ver grupo",
+    "LOAD_MORE_ERROR": "No se pudieron cargar más huéspedes. Inténtalo de nuevo más tarde."
   },
   "GUEST_DETAIL": {
     "TITLE": "Detalles del huésped",
@@ -180,7 +184,8 @@
     "SOCIAL": {
       "COUCHSURFING": "Ver perfil de Couchsurfing",
       "INSTAGRAM": "Ver perfil de Instagram",
-      "WHATSAPP": "Ver perfil de WhatsApp"
+      "WHATSAPP": "Ver perfil de WhatsApp",
+      "PHONE": "Llamar"
     },
     "DIVIDER": {
       "IDENTITY": "IDENTIDAD"
@@ -190,7 +195,6 @@
       "TITLE": "Información personal",
       "FULL_NAME": "Nombre completo",
       "BIRTH_DATE": "Fecha de nacimiento",
-      "PHONE_NUMBER": "Número de teléfono",
       "GAY": "Gay",
       "STAY_REQUEST": "Solicitud de alojamiento",
       "REQUESTED_STAY": "Solicitó alojamiento",
@@ -222,6 +226,7 @@
         "FAMILY": "Familia"
       },
       "STAYED": "¿Se alojó?",
+      "STAYED_GROUP": "¿Se alojaron?",
       "HUNG_OUT": "Pasamos tiempo juntos",
       "FIRST_VISIT": "Primera visita"
     },
@@ -263,7 +268,6 @@
         "SUBTITLE": "COMPAÑEROS DE VIAJE",
         "TITLE": "Integrantes del grupo",
         "GUEST_FALLBACK": "Huésped",
-        "WHATSAPP": "WhatsApp",
         "LIVING_IN": "Residencia actual"
       }
     }
@@ -277,10 +281,48 @@
       "FRIENDS": "Amigos",
       "FAMILY": "Familia"
     },
-    "ADD_GUEST": "Añadir otro huésped",
+    "CHANGE_TYPE": {
+      "SELECT_TITLE": "Seleccionar huéspedes",
+      "SELECT_DESCRIPTION": "Selecciona exactamente {{count}} huésped(es) que deseas conservar.",
+      "APPLY": "Aplicar selección",
+      "CANCEL": "Cancelar",
+      "CONFIRM_TITLE": "¿Confirmar cambio de grupo?",
+      "CONFIRM_DESCRIPTION": "Los huéspedes no seleccionados serán eliminados al guardar los cambios. Esta acción no se puede deshacer.",
+      "CONFIRM": "Sí, confirmar cambios"
+    },
+    "ADD_GUEST": {
+      "ADD_ANOTHER_GUEST": "Añadir otro huésped",
+      "SUCCESS": "Se ha añadido otro formulario de huésped"
+    },
     "CREATE": "Crear",
+    "CREATING": "Creando",
     "UPDATE": "Actualizar",
-    "MAX_MEMBERS": "Puedes añadir un máximo de 5 integrantes"
+    "UPDATING": "Actualizando",
+    "MAX_MEMBERS": "Puedes añadir un máximo de 5 miembros",
+    "REMOVE_GUEST": {
+      "TITLE": "Eliminar huésped",
+      "DESCRIPTION": "¿Estás seguro de que deseas eliminar a este huésped del formulario?",
+      "CONFIRM": "Sí, eliminar"
+    },
+    "GUEST_NUMBER": "Huésped n.º {{number}}",
+    "FORM_COUNT_SINGULAR": "1 formulario de huésped",
+    "FORM_COUNT": "{{count}} formularios de huésped",
+    "NO_CHANGES": {
+      "TITLE": "No se realizaron cambios",
+      "DESCRIPTION": "No has modificado ninguna información de este formulario. ¿Quieres salir sin guardar?",
+      "EXIT": "Salir sin guardar",
+      "CONTINUE": "Seguir editando"
+    },
+    "UPDATE": "Actualizar",
+    "MAX_MEMBERS": "Puedes añadir un máximo de 5 miembros",
+    "REMOVE_GUEST": {
+      "TITLE": "Eliminar huésped",
+      "DESCRIPTION": "¿Estás seguro de que deseas eliminar a este huésped del formulario?",
+      "CONFIRM": "Sí, eliminar"
+    },
+    "GUEST_NUMBER": "Huésped n.º {{number}}",
+    "FORM_COUNT_SINGULAR": "1 formulario de huésped",
+    "FORM_COUNT": "{{count}} formularios de huésped"
   },
   "TRIP_FORM": {
     "TITLE": "Información del viaje",
@@ -370,7 +412,8 @@
       "DUPLICATE_GIFT": "Este regalo ya se ha añadido",
       "GIFT_EXISTS": "Este regalo ya existe",
       "NO_GIFTS": "No hay regalos para eliminar",
-      "GIFTS_CLEARED": "Se ha limpiado la lista de regalos"
+      "GIFTS_CLEARED": "Lista de regalos vaciada",
+      "LOCATION_API_LIMIT": "Actualmente no podemos cargar estados y ciudades automáticamente. Puedes introducirlos manualmente en los campos correspondientes. ¡O inténtalo de nuevo más tarde!"
     },
     "ANNOUNCEMENTS": {
       "GIFT_REMOVED": "Regalo eliminado"
@@ -748,8 +791,16 @@
         "CONFIRM_BUTTON": "Eliminar huésped"
       },
       "SUCCESS": {
-        "MESSAGE": "<strong class=\"danger\">{{name}}</strong> se ha eliminado correctamente"
+        "GUEST_MESSAGE": "<strong class=\"danger\">{{name}}</strong> se ha eliminado correctamente",
+        "GROUP_MESSAGE": "<strong class=\"danger\">{{names}}</strong> se han eliminado correctamente"
       }
+    },
+    "DRAFT_EXIT": {
+      "TITLE": "¿Qué quieres hacer con tus cambios?",
+      "DESCRIPTION": "Tienes información en este formulario. Puedes guardar el borrador para continuar más tarde o salir sin conservar los cambios.",
+      "SAVE_AND_EXIT": "Salir y guardar cambios",
+      "DISCARD_AND_EXIT": "Salir sin guardar",
+      "STAY": "Quedarme"
     },
     "CREATE": {
       "GUEST_SUCCESS": "Huésped creado correctamente",
@@ -762,6 +813,33 @@
       "GUEST_ERROR": "Error al actualizar el huésped",
       "GROUP_SUCCESS": "Grupo actualizado correctamente",
       "GROUP_ERROR": "Error al actualizar el grupo"
+    },
+    "BUTTONS": {
+      "SAVE": "Guardar",
+      "CLOSE": "Cerrar",
+      "DELETE": "Eliminar",
+      "COPY": "Copiar",
+      "COPIED": "¡Copiado!"
+    },
+    "DELETE_GUEST": {
+      "CONFIRMATION": {
+        "MESSAGE": "¿Estás seguro de que deseas eliminar?",
+        "CONFIRM_BUTTON": "Quiero eliminar a este huésped",
+        "GROUP_CONFIRM_BUTTON": "Quiero eliminar este grupo"
+      },
+      "WARNING": {
+        "TITLE": "Lee atentamente antes de continuar",
+        "MESSAGE": "Esto eliminará permanentemente al huésped <strong class=\"danger\">{{name}}</strong>.",
+        "GROUP_MESSAGE": "Esto eliminará permanentemente al grupo <strong class=\"danger\">{{name}}</strong>.",
+        "CONFIRM_BUTTON": "Entiendo las consecuencias"
+      },
+      "TYPE_TO_CONFIRM": {
+        "TITLE": "Para confirmar, escribe \"<strong class=\"danger\">{{name}}</strong>\""
+      },
+      "SUCCESS": {
+        "MESSAGE": "<strong class=\"danger\">{{name}}</strong> se ha eliminado correctamente",
+        "GROUP_MESSAGE": "<strong class=\"danger\">{{names}}</strong> se han eliminado correctamente"
+      }
     }
   },
   "ERRORS": {

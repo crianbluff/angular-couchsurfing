@@ -1,4 +1,10 @@
 {
+  "GENERAL": {
+    "LOADING": "로딩 중",
+    "BACK": "뒤로",
+    "ERROR": "오류",
+    "CLOSE": "닫기"
+  },
   "MENU": {
     "HOME": "홈",
     "GUESTS": "게스트",
@@ -59,7 +65,8 @@
     "YES": "예",
     "NO": "아니요",
     "CLEAR": "지우기",
-    "SEARCH": "검색"
+    "SEARCH": "검색",
+    "SEARCHING": "검색 중"
   },
   "GUESTS_ACTIONS": {
     "SEE_STATS": "통계 보기",
@@ -74,13 +81,16 @@
     "CHANGE_SEARCH": "검색 조건을 변경해 보세요.",
     "CHANGE_TO_CARDS": "카드 보기로 전환",
     "CHANGE_TO_MAP": "지도 보기로 전환",
-    "CHANGE_TO_TABLE": "표 보기로 전환"
+    "CHANGE_TO_TABLE": "표 보기로 전환",
+    "RETRY": "다시 시도",
+    "LOAD_ERROR": "게스트를 더 불러오지 못했습니다.",
+    "CARDS_END": "게스트 목록의 마지막에 도달했습니다.",
+    "CARDS_END_COUNTRY": "{{country}} 출신 게스트 목록의 마지막에 도달했습니다.",
+    "CARDS_END_REGION": "{{region}} 출신 게스트 목록의 마지막에 도달했습니다.",
+    "CARDS_END_CONTINENT": "{{continent}} 출신 게스트 목록의 마지막에 도달했습니다.",
+    "CARDS_END_FILTERS": "선택한 필터에 해당하는 결과의 마지막에 도달했습니다."
   },
   "GUESTS_LOADING": {
-    "CARDS_1": "게스트를 불러오는 중",
-    "CARDS_2": "게스트를 준비하는 중",
-    "CARDS_3": "거의 완료되었습니다",
-    "CARDS_4": "곧 카드가 표시됩니다",
     "MAP_1": "지도를 불러오는 중",
     "MAP_2": "게스트를 찾는 중",
     "MAP_3": "지도를 준비하는 중",
@@ -134,26 +144,20 @@
     "DID_THEY_REQUEST": "숙박을 요청했나요?",
     "I_SENT_THE_REQUEST": "내가 숙박을 요청했습니다",
     "LOCATION": "위치",
-    "CONTINENT": "대륙",
-    "REGION": "지역",
     "HOMETOWN": "고향",
     "LIVING_IN": "거주지",
     "WE_MET": "만난 장소",
-    "OCCUPATION": "직업",
-    "GIFT": "선물",
-    "COMMENTS": "댓글",
-    "REFERENCES": "추천글",
-    "THEIR_REFERENCE": "상대방의 추천글",
-    "MY_REFERENCE": "내 추천글",
+    "BACK_TO_TOP": "맨 위로 이동",
     "GROUP_TYPES": {
       "solo": "개인",
       "couple": "커플",
       "friends": "친구",
       "family": "가족"
     },
-    "LOADING_1": "세부 정보를 불러오는 중",
-    "LOADING_2": "추가 정보를 가져오는 중",
-    "LOADING_3": "거의 완료되었습니다"
+    "DELETE_GUEST": "게스트 삭제",
+    "DELETE_GUESTS": "게스트 삭제",
+    "VIEW_GROUP": "그룹 보기",
+    "LOAD_MORE_ERROR": "게스트를 더 불러오지 못했습니다. 나중에 다시 시도해 주세요."
   },
   "GUEST_DETAIL": {
     "TITLE": "게스트 상세 정보",
@@ -179,7 +183,8 @@
     "SOCIAL": {
       "COUCHSURFING": "Couchsurfing 프로필 보기",
       "INSTAGRAM": "Instagram 프로필 보기",
-      "WHATSAPP": "WhatsApp 프로필 보기"
+      "WHATSAPP": "WhatsApp 프로필 보기",
+      "PHONE": "전화 걸기"
     },
     "DIVIDER": {
       "IDENTITY": "신원"
@@ -189,7 +194,6 @@
       "TITLE": "개인 정보",
       "FULL_NAME": "전체 이름",
       "BIRTH_DATE": "생년월일",
-      "PHONE_NUMBER": "전화번호",
       "GAY": "게이",
       "STAY_REQUEST": "숙박 요청",
       "REQUESTED_STAY": "상대방이 숙박을 요청했습니다",
@@ -221,6 +225,7 @@
         "FAMILY": "가족"
       },
       "STAYED": "숙박했나요?",
+      "STAYED_GROUP": "숙박했나요?",
       "HUNG_OUT": "함께 시간을 보냈나요?",
       "FIRST_VISIT": "첫 방문"
     },
@@ -262,7 +267,6 @@
         "SUBTITLE": "여행 동반자",
         "TITLE": "그룹 구성원",
         "GUEST_FALLBACK": "게스트",
-        "WHATSAPP": "WhatsApp",
         "LIVING_IN": "거주지"
       }
     }
@@ -276,10 +280,48 @@
       "FRIENDS": "친구",
       "FAMILY": "가족"
     },
-    "ADD_GUEST": "게스트 추가",
+    "CHANGE_TYPE": {
+      "SELECT_TITLE": "게스트 선택",
+      "SELECT_DESCRIPTION": "유지할 게스트를 정확히 {{count}}명 선택하세요.",
+      "APPLY": "선택 적용",
+      "CANCEL": "취소",
+      "CONFIRM_TITLE": "그룹 변경을 확인하시겠습니까?",
+      "CONFIRM_DESCRIPTION": "선택하지 않은 게스트는 변경 사항을 저장할 때 삭제됩니다. 이 작업은 취소할 수 없습니다.",
+      "CONFIRM": "예, 변경 사항을 확인합니다"
+    },
+    "ADD_GUEST": {
+      "ADD_ANOTHER_GUEST": "게스트 추가",
+      "SUCCESS": "새 게스트 양식이 추가되었습니다"
+    },
     "CREATE": "생성",
+    "CREATING": "생성 중",
+    "UPDATE": "업데이트",
+    "UPDATING": "업데이트 중",
+    "MAX_MEMBERS": "최대 5명의 멤버를 추가할 수 있습니다",
+    "REMOVE_GUEST": {
+      "TITLE": "게스트 삭제",
+      "DESCRIPTION": "이 게스트를 양식에서 삭제하시겠습니까?",
+      "CONFIRM": "예, 삭제"
+    },
+    "GUEST_NUMBER": "게스트 #{{number}}",
+    "FORM_COUNT_SINGULAR": "게스트 양식 1개",
+    "FORM_COUNT": "게스트 양식 {{count}}개",
+    "NO_CHANGES": {
+      "TITLE": "변경 사항 없음",
+      "DESCRIPTION": "이 양식의 정보를 수정하지 않았습니다. 저장하지 않고 나가시겠습니까?",
+      "EXIT": "저장하지 않고 나가기",
+      "CONTINUE": "계속 편집하기"
+    },
     "UPDATE": "수정",
-    "MAX_MEMBERS": "최대 5명까지 추가할 수 있습니다"
+    "MAX_MEMBERS": "최대 5명의 멤버를 추가할 수 있습니다",
+    "REMOVE_GUEST": {
+      "TITLE": "게스트 삭제",
+      "DESCRIPTION": "이 게스트를 양식에서 삭제하시겠습니까?",
+      "CONFIRM": "예, 삭제"
+    },
+    "GUEST_NUMBER": "게스트 #{{number}}",
+    "FORM_COUNT_SINGULAR": "게스트 양식 1개",
+    "FORM_COUNT": "게스트 양식 {{count}}개"
   },
   "TRIP_FORM": {
     "TITLE": "여행 정보",
@@ -369,7 +411,8 @@
       "DUPLICATE_GIFT": "이미 추가된 선물입니다",
       "GIFT_EXISTS": "이미 존재하는 선물입니다",
       "NO_GIFTS": "삭제할 선물이 없습니다",
-      "GIFTS_CLEARED": "선물 목록을 지웠습니다"
+      "GIFTS_CLEARED": "선물 목록이 비워졌습니다",
+      "LOCATION_API_LIMIT": "현재 주와 도시를 자동으로 불러올 수 없습니다. 해당 입력란에 직접 입력하거나 나중에 다시 시도해 주세요!"
     },
     "ANNOUNCEMENTS": {
       "GIFT_REMOVED": "선물을 삭제했습니다"
@@ -749,8 +792,16 @@
         "CONFIRM_BUTTON": "게스트 삭제"
       },
       "SUCCESS": {
-        "MESSAGE": "<strong class=\"danger\">{{name}}</strong>이(가) 성공적으로 삭제되었습니다"
+        "GUEST_MESSAGE": "<strong class=\"danger\">{{name}}</strong>이(가) 성공적으로 삭제되었습니다",
+        "GROUP_MESSAGE": "<strong class=\"danger\">{{names}}</strong>이(가) 성공적으로 삭제되었습니다"
       }
+    },
+    "DRAFT_EXIT": {
+      "TITLE": "변경 사항을 어떻게 하시겠습니까?",
+      "DESCRIPTION": "이 양식에 정보를 입력했습니다. 임시 저장하여 나중에 계속 작성하거나 변경 사항을 저장하지 않고 나갈 수 있습니다.",
+      "SAVE_AND_EXIT": "나가면서 변경 사항 저장",
+      "DISCARD_AND_EXIT": "저장하지 않고 나가기",
+      "STAY": "계속 작성하기"
     },
     "CREATE": {
       "GUEST_SUCCESS": "게스트가 성공적으로 생성되었습니다",
@@ -763,6 +814,33 @@
       "GUEST_ERROR": "게스트 정보 수정 중 오류가 발생했습니다",
       "GROUP_SUCCESS": "그룹 정보가 성공적으로 수정되었습니다",
       "GROUP_ERROR": "그룹 정보 수정 중 오류가 발생했습니다"
+    },
+    "BUTTONS": {
+      "SAVE": "저장",
+      "CLOSE": "닫기",
+      "DELETE": "삭제",
+      "COPY": "복사",
+      "COPIED": "복사되었습니다!"
+    },
+    "DELETE_GUEST": {
+      "CONFIRMATION": {
+        "MESSAGE": "정말 삭제하시겠습니까?",
+        "CONFIRM_BUTTON": "이 게스트를 삭제하겠습니다",
+        "GROUP_CONFIRM_BUTTON": "이 그룹을 삭제하겠습니다"
+      },
+      "WARNING": {
+        "TITLE": "계속하기 전에 주의 깊게 읽어 주세요",
+        "MESSAGE": "게스트 <strong class=\"danger\">{{name}}</strong>가 영구적으로 삭제됩니다.",
+        "GROUP_MESSAGE": "그룹 <strong class=\"danger\">{{name}}</strong>가 영구적으로 삭제됩니다.",
+        "CONFIRM_BUTTON": "삭제 결과를 이해했습니다"
+      },
+      "TYPE_TO_CONFIRM": {
+        "TITLE": "확인하려면 \"<strong class=\"danger\">{{name}}</strong>\"을 입력하세요"
+      },
+      "SUCCESS": {
+        "MESSAGE": "<strong class=\"danger\">{{name}}</strong>가 성공적으로 삭제되었습니다",
+        "GROUP_MESSAGE": "<strong class=\"danger\">{{names}}</strong>가 성공적으로 삭제되었습니다"
+      }
     }
   },
   "ERRORS": {

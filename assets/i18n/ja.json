@@ -1,4 +1,10 @@
 {
+  "GENERAL": {
+    "LOADING": "読み込み中",
+    "BACK": "戻る",
+    "ERROR": "エラー",
+    "CLOSE": "閉じる"
+  },
   "MENU": {
     "HOME": "ホーム",
     "GUESTS": "ゲスト",
@@ -59,7 +65,8 @@
     "YES": "はい",
     "NO": "いいえ",
     "CLEAR": "クリア",
-    "SEARCH": "検索"
+    "SEARCH": "検索",
+    "SEARCHING": "検索中"
   },
   "GUESTS_ACTIONS": {
     "SEE_STATS": "統計を見る",
@@ -74,13 +81,16 @@
     "CHANGE_SEARCH": "検索条件を変更してみてください。",
     "CHANGE_TO_CARDS": "カード表示に切り替え",
     "CHANGE_TO_MAP": "地図表示に切り替え",
-    "CHANGE_TO_TABLE": "テーブル表示に切り替え"
+    "CHANGE_TO_TABLE": "テーブル表示に切り替える",
+    "RETRY": "再試行",
+    "LOAD_ERROR": "これ以上ゲストを読み込めませんでした。",
+    "CARDS_END": "ゲスト一覧の最後に到達しました。",
+    "CARDS_END_COUNTRY": "{{country}}のゲスト一覧の最後に到達しました。",
+    "CARDS_END_REGION": "{{region}}のゲスト一覧の最後に到達しました。",
+    "CARDS_END_CONTINENT": "{{continent}}のゲスト一覧の最後に到達しました。",
+    "CARDS_END_FILTERS": "選択したフィルターに一致する結果は以上です。"
   },
   "GUESTS_LOADING": {
-    "CARDS_1": "ゲストを読み込んでいます",
-    "CARDS_2": "ゲストの準備をしています",
-    "CARDS_3": "もう少しです",
-    "CARDS_4": "カードを表示しています",
     "MAP_1": "地図を読み込んでいます",
     "MAP_2": "ゲストを検索しています",
     "MAP_3": "地図を準備しています",
@@ -134,26 +144,20 @@
     "DID_THEY_REQUEST": "宿泊をリクエストしましたか？",
     "I_SENT_THE_REQUEST": "自分がリクエストを送信した",
     "LOCATION": "場所",
-    "CONTINENT": "大陸",
-    "REGION": "地域",
     "HOMETOWN": "出身地",
     "LIVING_IN": "居住地",
     "WE_MET": "出会った場所",
-    "OCCUPATION": "職業",
-    "GIFT": "贈り物",
-    "COMMENTS": "コメント",
-    "REFERENCES": "リファレンス",
-    "THEIR_REFERENCE": "相手からのリファレンス",
-    "MY_REFERENCE": "自分からのリファレンス",
+    "BACK_TO_TOP": "ページの先頭へ戻る",
     "GROUP_TYPES": {
       "solo": "一人",
       "couple": "カップル",
       "friends": "友人",
       "family": "家族"
     },
-    "LOADING_1": "詳細を読み込んでいます",
-    "LOADING_2": "追加情報を取得しています",
-    "LOADING_3": "もう少しです"
+    "DELETE_GUEST": "ゲストを削除",
+    "DELETE_GUESTS": "ゲストを削除",
+    "VIEW_GROUP": "グループを表示",
+    "LOAD_MORE_ERROR": "これ以上ゲストを読み込めませんでした。しばらくしてからもう一度お試しください。"
   },
   "GUEST_DETAIL": {
     "TITLE": "ゲストの詳細",
@@ -179,7 +183,8 @@
     "SOCIAL": {
       "COUCHSURFING": "Couchsurfingのプロフィールを表示",
       "INSTAGRAM": "Instagramのプロフィールを表示",
-      "WHATSAPP": "WhatsAppのプロフィールを表示"
+      "WHATSAPP": "WhatsAppのプロフィールを表示",
+      "PHONE": "電話をかける"
     },
     "DIVIDER": {
       "IDENTITY": "身元情報"
@@ -189,7 +194,6 @@
       "TITLE": "個人情報",
       "FULL_NAME": "氏名",
       "BIRTH_DATE": "生年月日",
-      "PHONE_NUMBER": "電話番号",
       "GAY": "ゲイ",
       "STAY_REQUEST": "宿泊リクエスト",
       "REQUESTED_STAY": "相手が宿泊をリクエストした",
@@ -221,6 +225,7 @@
         "FAMILY": "家族"
       },
       "STAYED": "宿泊しましたか？",
+      "STAYED_GROUP": "宿泊しましたか？",
       "HUNG_OUT": "一緒に過ごした",
       "FIRST_VISIT": "初めての訪問"
     },
@@ -262,7 +267,6 @@
         "SUBTITLE": "旅の仲間",
         "TITLE": "グループメンバー",
         "GUEST_FALLBACK": "ゲスト",
-        "WHATSAPP": "WhatsApp",
         "LIVING_IN": "居住地"
       }
     }
@@ -276,10 +280,48 @@
       "FRIENDS": "友人",
       "FAMILY": "家族"
     },
-    "ADD_GUEST": "別のゲストを追加",
+    "CHANGE_TYPE": {
+      "SELECT_TITLE": "ゲストを選択",
+      "SELECT_DESCRIPTION": "保持するゲストを正確に{{count}}人選択してください。",
+      "APPLY": "選択を適用",
+      "CANCEL": "キャンセル",
+      "CONFIRM_TITLE": "グループの変更を確定しますか？",
+      "CONFIRM_DESCRIPTION": "選択されなかったゲストは、変更を保存すると削除されます。この操作は取り消せません。",
+      "CONFIRM": "はい、変更を確定します"
+    },
+    "ADD_GUEST": {
+      "ADD_ANOTHER_GUEST": "ゲストをもう1人追加",
+      "SUCCESS": "新しいゲストフォームが追加されました"
+    },
     "CREATE": "作成",
+    "CREATING": "作成中",
     "UPDATE": "更新",
-    "MAX_MEMBERS": "追加できるメンバーは最大5人です"
+    "UPDATING": "更新中",
+    "MAX_MEMBERS": "追加できるメンバーは最大5人です",
+    "REMOVE_GUEST": {
+      "TITLE": "ゲストを削除",
+      "DESCRIPTION": "このゲストをフォームから削除してもよろしいですか？",
+      "CONFIRM": "はい、削除"
+    },
+    "GUEST_NUMBER": "ゲスト #{{number}}",
+    "FORM_COUNT_SINGULAR": "ゲストフォーム1件",
+    "FORM_COUNT": "ゲストフォーム{{count}}件",
+    "NO_CHANGES": {
+      "TITLE": "変更はありません",
+      "DESCRIPTION": "このフォームの情報は変更されていません。保存せずに終了しますか？",
+      "EXIT": "保存せずに終了",
+      "CONTINUE": "編集を続ける"
+    },
+    "UPDATE": "更新",
+    "MAX_MEMBERS": "追加できるメンバーは最大5人です",
+    "REMOVE_GUEST": {
+      "TITLE": "ゲストを削除",
+      "DESCRIPTION": "このゲストをフォームから削除してもよろしいですか？",
+      "CONFIRM": "はい、削除"
+    },
+    "GUEST_NUMBER": "ゲスト #{{number}}",
+    "FORM_COUNT_SINGULAR": "ゲストフォーム1件",
+    "FORM_COUNT": "ゲストフォーム{{count}}件"
   },
   "TRIP_FORM": {
     "TITLE": "旅行情報",
@@ -369,7 +411,8 @@
       "DUPLICATE_GIFT": "この贈り物はすでに追加されています",
       "GIFT_EXISTS": "この贈り物はすでに存在します",
       "NO_GIFTS": "クリアする贈り物がありません",
-      "GIFTS_CLEARED": "贈り物リストをクリアしました"
+      "GIFTS_CLEARED": "ギフトリストをクリアしました",
+      "LOCATION_API_LIMIT": "現在、州や都市を自動的に読み込むことができません。対応するフィールドに手動で入力するか、しばらくしてからもう一度お試しください！"
     },
     "ANNOUNCEMENTS": {
       "GIFT_REMOVED": "贈り物を削除しました"
@@ -748,8 +791,16 @@
         "CONFIRM_BUTTON": "ゲストを削除"
       },
       "SUCCESS": {
-        "MESSAGE": "<strong class=\"danger\">{{name}}</strong>を正常に削除しました"
+        "GUEST_MESSAGE": "<strong class=\"danger\">{{name}}</strong>を正常に削除しました",
+        "GROUP_MESSAGE": "<strong class=\"danger\">{{names}}</strong>を正常に削除しました"
       }
+    },
+    "DRAFT_EXIT": {
+      "TITLE": "変更内容をどうしますか？",
+      "DESCRIPTION": "このフォームに情報が入力されています。下書きを保存して後で続けることも、変更を保存せずに終了することもできます。",
+      "SAVE_AND_EXIT": "終了して変更を保存",
+      "DISCARD_AND_EXIT": "保存せずに終了",
+      "STAY": "このまま続ける"
     },
     "CREATE": {
       "GUEST_SUCCESS": "ゲストを作成しました",
@@ -762,6 +813,33 @@
       "GUEST_ERROR": "ゲストの更新中にエラーが発生しました",
       "GROUP_SUCCESS": "グループを更新しました",
       "GROUP_ERROR": "グループの更新中にエラーが発生しました"
+    },
+    "BUTTONS": {
+      "SAVE": "保存",
+      "CLOSE": "閉じる",
+      "DELETE": "削除",
+      "COPY": "コピー",
+      "COPIED": "コピーしました！"
+    },
+    "DELETE_GUEST": {
+      "CONFIRMATION": {
+        "MESSAGE": "本当に削除しますか？",
+        "CONFIRM_BUTTON": "このゲストを削除する",
+        "GROUP_CONFIRM_BUTTON": "このグループを削除する"
+      },
+      "WARNING": {
+        "TITLE": "続行する前に注意事項をよくお読みください",
+        "MESSAGE": "ゲスト <strong class=\"danger\">{{name}}</strong> は完全に削除されます。",
+        "GROUP_MESSAGE": "グループ <strong class=\"danger\">{{name}}</strong> は完全に削除されます。",
+        "CONFIRM_BUTTON": "削除による影響を理解しました"
+      },
+      "TYPE_TO_CONFIRM": {
+        "TITLE": "確認するには \"<strong class=\"danger\">{{name}}</strong>\" と入力してください"
+      },
+      "SUCCESS": {
+        "MESSAGE": "<strong class=\"danger\">{{name}}</strong> を正常に削除しました",
+        "GROUP_MESSAGE": "<strong class=\"danger\">{{names}}</strong> を正常に削除しました"
+      }
     }
   },
   "ERRORS": {
